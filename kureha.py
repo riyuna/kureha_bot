@@ -3,7 +3,8 @@ from discord.ext import commands
 
 app = commands.Bot(command_prefix = '/', intents=discord.Intents.all())
 
-token = ''
+with open('token.txt') as f:
+    token=f.readline()
 
 @app.event
 async def on_ready():
